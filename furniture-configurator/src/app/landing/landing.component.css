@@ -1,0 +1,102 @@
+#banner{
+    margin-top: -1px;
+    width: 100vw;
+    height: calc(100vh - 89px);
+    display: flex;
+}
+#banner-cover{
+    position: absolute;
+    left: 0;
+    height: calc(100vh - 89px);
+    width: 62vw;
+    z-index: 1;
+    pointer-events: none;
+}
+#banner-image{
+    margin-left: auto;
+    width:78vw;
+    z-index: 0;
+    pointer-events: none;
+}
+#logotip{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-family: 'Hymala';
+    font-size: 6rem;
+    line-height: 122px;
+    text-align: center;
+    z-index: 3;
+}
+#logotip span{
+    color:#43B1F6;
+    font-family: 'Tangerine';
+    font-size: 5.5rem;
+    font-weight: bold;
+}
+.swipe-icon{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.swipe-icon #mobile-swipe-image{
+    display: none;
+}
+@media (max-width: 1040px){
+    #logotip{
+        font-size: 5rem;
+        line-height: 3rem;
+    }
+    #logotip span{
+        font-size: 4.5rem;
+    }
+}
+@media (max-width: 780px){
+    #banner-cover{
+        width: 85vw;
+    }
+    #logotip{
+        left: 30%;
+        font-size: 4rem;
+    }
+    #logotip span{
+        font-size: 3.5rem;
+    }
+    .swipe-icon{
+        left: 30%;
+    }
+    .swipe-icon #mobile-swipe-image{
+        display: unset;
+    }
+    .swipe-icon #desktop-swipe-image{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    #banner{
+        height: calc(100vh - 52px);
+    }
+    #banner-cover{
+        width: 90vw;
+        height: calc(100vh - 52px);
+    }
+    #logotip{
+        font-size: 3rem;
+    }
+    #logotip span{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 300px){
+    #logotip{
+        font-size: 2rem;
+    }
+    #logotip span{
+        font-size: 1.5rem;
+    }
+}

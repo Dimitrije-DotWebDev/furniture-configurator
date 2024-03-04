@@ -1,0 +1,25 @@
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+#canvas{
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+#configurator{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 25vw;
+}
+#configurator img{
+    width: 80px;
+    height: 80px;
+}
+.selected{
+    border: 3px solid yellow;
+}

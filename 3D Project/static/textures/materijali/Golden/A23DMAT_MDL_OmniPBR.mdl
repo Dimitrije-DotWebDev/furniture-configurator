@@ -1,0 +1,19 @@
+mdl 1.4;
+
+using ::OmniPBR import OmniPBR;
+import ::tex::gamma_mode;
+import ::state::normal;
+
+export material A23DMAT_MDL_OmniPBR(*)
+ = OmniPBR(    
+    diffuse_texture: texture_2d("./A23DTEX_Albedo.jpg", ::tex::gamma_srgb),    
+    ao_to_diffuse: 1.f,
+    ao_texture: texture_2d("./A23DTEX_Ambient Occlusion.jpg", ::tex::gamma_linear),    
+    metallic_texture_influence: 1.f,
+    metallic_texture: texture_2d("./A23DTEX_Metallic.jpg", ::tex::gamma_linear),    
+    normalmap_texture: texture_2d("./A23DTEX_Normal.jpg", ::tex::gamma_linear),    
+    reflection_roughness_texture_influence: 1.f,
+    reflectionroughness_texture: texture_2d("./A23DTEX_Roughness.jpg", ::tex::gamma_linear),    
+    texture_translate: float2(0.f),
+    texture_rotate: 0.f,
+    texture_scale: float2(1.f));
