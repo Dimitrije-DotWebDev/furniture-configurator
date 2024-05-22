@@ -1,0 +1,52 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.choose-text{
+    letter-spacing: 1rem;
+    letter-spacing: 3rem;
+    font-size: 5rem;
+    font-weight: 100;
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+
+}
+.list-view{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 780px){
+    .row{
+        justify-content: center;
+    }
+    .choose-text span{
+        display: none;
+    }
+    .choose-text:after{
+        content: "MODELS"
+    }
+}
+@media(max-width: 600px){
+    .row{
+        margin: 0;
+    }
+    .choose-text:after{
+        margin-left: 10px;
+        align-self: center;
+        padding-left: 1.5rem;
+        font-size: 2rem;
+        letter-spacing: 2.5rem;
+    }
+}
+
+@media(max-width: 300px){
+    .choose-text:after{
+        
+    font-size: 0.8rem;
+    }
+}

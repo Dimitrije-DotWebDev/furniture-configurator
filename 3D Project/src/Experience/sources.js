@@ -46,7 +46,7 @@ export default [
     {
         name: "roomTexturePZ",
         type: "texture",
-        path: 'textures/room/wallMaps/pz.png'
+        path: 'textures/room/wallMaps/A23DTEX_Albedo.jpg'
     },
     {
         name: "roomWallMetalMap",
@@ -56,27 +56,27 @@ export default [
     {
         name: "roomWallNormalMap",
         type: "texture",
-        path: 'textures/room/wallMaps/4K-plaster_27_normal.png'
+        path: 'textures/room/wallMaps/A23DTEX_Normal.jpg'
     },
     {
         name: "roomWallRoughnessMap",
         type: "texture",
-        path: 'textures/room/wallMaps/4K-plaster_27_roughness.png'
+        path: 'textures/room/wallMaps/A23DTEX_Roughness.jpg'
     },
     {
         name: "roomWallBumpMap",
         type: "texture",
-        path: 'textures/room/wallMaps/4K-plaster_27_height.png'
+        path: 'textures/room/wallMaps/A23DTEX_Height.png'
     },
     {
         name: "roomWallAoMap",
         type: "texture",
-        path: 'textures/room/wallMaps/4K-plaster_27_ambientocclusion.png'
+        path: 'textures/room/wallMaps/A23DTEX_Ambient Occlusion.jpg'
     },
 
     
 
-    {
+    /*{
         name: "sofaModel",
         type: "fbxModel",
         path: 'models/sofa/garnitura 1.fbx'
@@ -100,10 +100,31 @@ export default [
         name: "sofa2Model",
         type: "fbxModel",
         path: 'models/sofa/sofa2/sofa2.fbx'
+    },*/
+    {
+        name: "lampModel",
+        type: "gltfModel",
+        path: 'models/room/lamp/lamp.gltf'
+    },
+    {
+        name: "plantModel",
+        type: "gltfModel",
+        path: 'models/room/plant/plant.gltf'
     },
     {
         name: "tvModel",
         type: "gltfModel",
         path: 'models/room/tv/tv.glb'
     },
+    {
+        name: "tvTexture",
+        type: "texture",
+        path: 'textures/room/tvTexture/tv-texture.jpg'
+    }
+    
+    /*{
+        name: "marsejModel",
+        type: "fbxModel",
+        path: 'models/sofa/marsej/marsej-joined.fbx'
+    }*/
 ]

@@ -12,9 +12,11 @@ export default class World{
         this.resources.on('ready', ()=>{
             this.environment = new Environment();
             this.room = new Room(50,20,40);
-            this.garnitura = new Garnitura(this.resources.items.carreraModel, 0.1);
-
         })
+    }
+
+    setGarnitura(path, type, scale){
+        this.garnitura = new Garnitura(path, type, scale);
     }
 
     update(){

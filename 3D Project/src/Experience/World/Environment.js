@@ -19,7 +19,7 @@ export default class Environment{
         this.scene.add(this.hemisphereLight);
     }
     setSunLight(){
-        this.sunLight = new THREE.SpotLight(0xffa95c, 3000);
+        this.sunLight = new THREE.SpotLight(0xffa95c, 400);
         this.sunLight.castShadow = true;
         this.sunLight.shadow.camera.far = 150;
         this.sunLight.shadow.camera.left = -30;

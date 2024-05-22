@@ -6,38 +6,153 @@
     <title>Furniture Configurator</title>
 </head>
 <body>
+    <div class="loading">
+        <div class='uil-ring-css' style='transform:scale(0.79);'>
+          <div></div>
+        </div>
+      </div>
     <canvas class="webgl"></canvas>
     <div id="configurator">
+        <div id="icons">
+            <div class="icon">
+                <img src="/entire sofa.png" alt="" data-objects="Box004, Box003, Box002" data-isFabric = true>
+                <span class="icon-label">Entire Sofa</span>
+            </div>
+            <div class="icon">
+                <img src="/sitting part.png" alt="" data-objects="Box003" data-isFabric = true>
+                <span class="icon-label">Sitting Part</span>
+            </div>
+            <div class="icon">
+                <img src="/sofa sides.png" alt="" data-objects="Box002" data-isFabric = true>
+                <span class="icon-label">Sofa Sides</span>
+            </div>
+            <div class="icon">
+                <img src="/sofa legs.png" alt="" data-objects="Object074" data-isFabric = false>
+                <span class="icon-label">Sofa Legs</span>
+            </div>
+        </div>
+        <div id="material">
+            <div data-materialName="LUIS">
+                <img src="../static/textures/materijali/LUIS 39.jpg" alt="" class="selected" data-mapPath="textures/materijali/PH/">
+                <span>LUIS</span>
+            </div>
+            <div data-materialName="TEXAS">
+                <img src="../static/textures/materijali/Texas 23.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>TEXAS</span>
+            </div>
+            <div data-materialName="HARMONY">
+                <img src="../static/textures/materijali/PH/A23DTEX_Albedo.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>HARMONY</span>
+            </div>
+            <div data-materialName="SUEDE">
+                <img src="../static//textures/materijali/Suede/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+                <span>Suede</span>
+            </div>
+            <div data-materialName="GOLDEN">
+                <img src="../static//textures/materijali/Golden/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+                <span>Golden</span>
+            </div>
+            
+            
+            
+        </div>
         <div id="materials">
             <img src="../static/textures/materijali/wood0.jpg" alt="" class="selected" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/wood1.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/wood2.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+            <img src="../static/textures/materijali/Metal/A23DTEX_Albedo.jpg" alt="" class="" data-mapPath="textures/materijali/Metal/">
+            <!--<img src="../static/textures/materijali/wood1.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+            <img src="../static/textures/materijali/wood2.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">-->
         </div>
         <br />
         <div id="colors">
-            <img src="../static/textures/materijali/LUIS 39.jpg" alt="" class="selected" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/LUIS 13.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/LUIS 77.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/Texas 23.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/Texas 91.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/Texas 95.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-
-            <img src="../static/textures/materijali/PH/A23DTEX_Albedo.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/PH/Perfect Harmony brown.png" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/PH/Perfect Harmony green.png" alt="" class="" data-mapPath="textures/materijali/PH/">
-            <img src="../static/textures/materijali/PH/Perfect Harmony orange.png" alt="" class="" data-mapPath="textures/materijali/PH/">
-
-            <img src="../static//textures/materijali/SnakeSkin/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/SnakeSkin/">
+            <div class="selected-material" data-materialName="LUIS">
+                <img src="../static/textures/materijali/LUIS 39.jpg" alt="" class="selected" data-mapPath="textures/materijali/PH/">
+                <span>GREEN</span>
+            </div>
+            <div class="selected-material" data-materialName="LUIS">
+                <img src="../static/textures/materijali/LUIS 13.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>WHITE</span>
+            </div>
+            <div class="selected-material" data-materialName="LUIS">
+                <img src="../static/textures/materijali/LUIS 77.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>BLUE</span>
+            </div>
             
-            <img src="../static//textures/materijali/Suede/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Suede/">
-            <img src="../static//textures/materijali/Suede/sara bez.jpg" alt="" data-mapPath="textures/materijali/Suede/">
-            <img src="../static//textures/materijali/Suede/sara rblue.jpg" alt="" data-mapPath="textures/materijali/Suede/">
-            <img src="../static//textures/materijali/Suede/sara rose.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+            <div class="not-selected-material" data-materialName="TEXAS">
+                <img src="../static/textures/materijali/Texas 23.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>WHITE</span>
+            </div>
+            <div class="not-selected-material" data-materialName="TEXAS">
+                <img src="../static/textures/materijali/Texas 91.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>BLUE</span>
+            </div>
+            <div class="not-selected-material" data-materialName="TEXAS">
+                <img src="../static/textures/materijali/Texas 95.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>GREY</span>
+            </div>
 
-            <img src="../static//textures/materijali/Golden/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Golden/">
-            <img src="../static//textures/materijali/Golden/Zlatna sara crn.jpg" alt="" data-mapPath="textures/materijali/Golden/">
-            <img src="../static//textures/materijali/Golden/Zlatna sara krem.jpg" alt="" data-mapPath="textures/materijali/Golden/">
-            <img src="../static//textures/materijali/Golden/Zlatna sara plava.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+            <div class="not-selected-material" data-materialName="HARMONY">
+                <img src="../static/textures/materijali/PH/A23DTEX_Albedo.jpg" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>BLUE</span>
+            </div>
+            <div class="not-selected-material" data-materialName="HARMONY">
+                <img src="../static/textures/materijali/PH/Perfect Harmony brown.png" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>BROWN</span>
+            </div>
+            <div class="not-selected-material" data-materialName="HARMONY">
+                <img src="../static/textures/materijali/PH/Perfect Harmony green.png" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>GREEN</span>
+            </div>
+            <div class="not-selected-material" data-materialName="HARMONY">
+                <img src="../static/textures/materijali/PH/Perfect Harmony orange.png" alt="" class="" data-mapPath="textures/materijali/PH/">
+                <span>ORANGE</span>
+            </div>
+
+            
+            <div class="not-selected-material" data-materialName="SUEDE">
+                <img src="../static//textures/materijali/Suede/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+                <span>CREAM</span>
+            </div>
+            <div class="not-selected-material" data-materialName="SUEDE">
+                <img src="../static//textures/materijali/Suede/sara bez.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+                <span>WHITE</span>
+            </div>
+            <div class="not-selected-material" data-materialName="SUEDE">
+                <img src="../static//textures/materijali/Suede/sara rblue.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+                <span>BLUE</span>
+            </div>
+            <div class="not-selected-material" data-materialName="SUEDE">
+                <img src="../static//textures/materijali/Suede/sara rose.jpg" alt="" data-mapPath="textures/materijali/Suede/">
+                <span>PINK</span>
+            </div>
+            
+            
+            <div class="not-selected-material" data-materialName="GOLDEN">
+                <img src="../static//textures/materijali/Golden/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+                <span>GOLD</span>
+            </div>
+            <div class="not-selected-material" data-materialName="GOLDEN">
+                <img src="../static//textures/materijali/Golden/Zlatna sara crn.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+                <span>CRN</span>
+            </div>
+            <div class="not-selected-material" data-materialName="GOLDEN">
+                <img src="../static//textures/materijali/Golden/Zlatna sara krem.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+                <span>CREAM</span>
+            </div>
+            <div class="not-selected-material" data-materialName="GOLDEN">
+                <img src="../static//textures/materijali/Golden/Zlatna sara plava.jpg" alt="" data-mapPath="textures/materijali/Golden/">
+                <span>BLUE</span>
+            </div>
+            <!--<img src="../static//textures/materijali/SnakeSkin/A23DTEX_Albedo.jpg" alt="" data-mapPath="textures/materijali/SnakeSkin/">-->
+            
+            
+            
+            
+            
+
+            
+            
+            
+            
         </div>
     </div>
 </body>

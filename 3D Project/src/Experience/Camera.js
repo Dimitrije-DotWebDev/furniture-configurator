@@ -22,6 +22,12 @@ export default class Camera{
         this.controls = new OrbitControls(this.instance, this.canvas);
         this.controls.enableDamping = true;
     }
+    setSnapshotPosition(){
+        this.experience.scene.background = new THREE.Color(0xffffff);
+        this.instance.position.set(0,13,48);
+        this.controls.target.set(0,0,0);
+        this.update();
+    }
     resize(){
         this.instance.aspect = this.sizes.width / this.sizes.height;
         this.instance.updateProjectionMatrix();

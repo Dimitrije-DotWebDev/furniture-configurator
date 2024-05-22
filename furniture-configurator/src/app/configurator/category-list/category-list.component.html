@@ -1,0 +1,16 @@
+<div *ngIf="categories.length === 0; else showCategories">
+    There is nothing to select yet.
+</div>
+
+<ng-template #showCategories>
+    <div class="list-view">
+        <div class="row">
+            <app-category *ngFor="let category of categories"
+                [title] = "category.title"
+                [imagePath] = "category.imagePath"
+            >
+            </app-category>
+        </div>
+        <p class="choose-text"><span>CHOOSE CATEGORY</span></p>
+    </div>
+</ng-template>

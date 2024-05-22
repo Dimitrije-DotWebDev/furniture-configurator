@@ -23,15 +23,14 @@ export default class Resources extends EventEmitter{
         this.loaders.fbxLoader = new FBXLoader();
     }
 
-    startLoading(){
+    async startLoading(){
         for(const source of this.sources){
             if(source.type === "gltfModel"){
-                this.loaders.gltfLoader.load(
+                const [file] = await Promise.all([this.loaders.gltfLoader.loadAsync(
                     source.path,
-                    (file) => {
-                        this.sourceLoaded(source,file)
-                    }
-                );
+                )]);
+                console.log(source);
+                this.sourceLoaded(source,file)
             }else if(source.type === "fbxModel"){
                 this.loaders.fbxLoader.load(
                     source.path,
@@ -61,7 +60,7 @@ export default class Resources extends EventEmitter{
         this.items[source.name] = file;
         this.loaded++;
 
-        if(this.loaded == this.toLoad){
+        if(this.loaded == this.toLoad+1){
             this.trigger("ready");
         }
     }

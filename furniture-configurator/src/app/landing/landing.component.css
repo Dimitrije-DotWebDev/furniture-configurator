@@ -1,8 +1,13 @@
 #banner{
-    margin-top: -1px;
+    margin-top: 90px;
     width: 100vw;
     height: calc(100vh - 89px);
     display: flex;
+}
+.scrolled-banner{
+    position: relative;
+    margin-top: calc(-100vh + 89px)!important;
+    transition-duration: 2s;
 }
 #banner-cover{
     position: absolute;
@@ -10,13 +15,11 @@
     height: calc(100vh - 89px);
     width: 62vw;
     z-index: 1;
-    pointer-events: none;
 }
 #banner-image{
     margin-left: auto;
     width:78vw;
     z-index: 0;
-    pointer-events: none;
 }
 #logotip{
     color: white;
@@ -34,7 +37,7 @@
     color:#43B1F6;
     font-family: 'Tangerine';
     font-size: 5.5rem;
-    font-weight: bold;
+    font-weight: light;
 }
 .swipe-icon{
     position: absolute;
@@ -60,14 +63,15 @@
         width: 85vw;
     }
     #logotip{
-        left: 30%;
+        transform: translateX(-25%);
+        left: 5vw;
         font-size: 4rem;
     }
     #logotip span{
         font-size: 3.5rem;
     }
     .swipe-icon{
-        left: 30%;
+        left: 22%;
     }
     .swipe-icon #mobile-swipe-image{
         display: unset;
@@ -79,6 +83,7 @@
 
 @media (max-width: 600px){
     #banner{
+        margin-top: 52px;
         height: calc(100vh - 52px);
     }
     #banner-cover{
@@ -87,6 +92,9 @@
     }
     #logotip{
         font-size: 3rem;
+    }
+    #logotip img{
+        width: 50%;
     }
     #logotip span{
         font-size: 2.5rem;

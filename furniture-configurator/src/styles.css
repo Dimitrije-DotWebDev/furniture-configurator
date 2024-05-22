@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Sora';
+}
 html,body{
-    width: 100vw;
-    min-height: 100vh;
+    max-width: 100vw;
     overflow-x: hidden;
     padding: 0;
     margin: 0;

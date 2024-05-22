@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConfiguratorComponent } from './configurator/configurator.component';
+import { ConfiguratorModule } from './configurator/configurator.module';
 
 const routes: Routes = [
   {
@@ -10,12 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'configurator',
-    component: ConfiguratorComponent
+    loadChildren: (): Promise<typeof ConfiguratorModule> => import('./configurator/configurator.module').then((m) => m.ConfiguratorModule)
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const AppRoutingModule = RouterModule.forRoot(routes);

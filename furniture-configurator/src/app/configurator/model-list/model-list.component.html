@@ -1,0 +1,16 @@
+<div *ngIf="models.length === 0; else showModels">
+    There is nothing to select yet.
+</div>
+
+<ng-template #showModels>
+    <div class="list-view">
+        <div class="row">
+            <app-model *ngFor="let model of models"
+                [title] = "model.title"
+                [imagePath] = "model.imagePath"
+            >
+            </app-model>
+        </div>
+        <p class="choose-text"><span>CHOOSE MODEL</span></p>
+    </div>
+</ng-template>

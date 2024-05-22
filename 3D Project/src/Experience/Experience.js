@@ -7,6 +7,7 @@ import World from './World/World.js';
 import Resources from './Utils/Resources.js';
 import Debug from './Utils/Debug.js';
 import sources from "./sources.js";
+import Stats from 'three/examples/jsm/libs/stats.module'
 let instance = null;
 
 export default class Experience{
@@ -17,7 +18,9 @@ export default class Experience{
         instance = this;
         //Global access
         window.experience = this;
-
+        this.statsUI = new Stats()
+        this.statsUI.showPanel(2);
+        document.body.appendChild(this.statsUI.dom);
         this.canvas = canvas;
         this.debug = new Debug();
         this.sizes = new Sizes();
@@ -36,7 +39,12 @@ export default class Experience{
             this.update();
         });
     }
-
+    setGarnitura(path, type, scale){
+        this.world.setGarnitura(path, type, scale);
+    }
+    getSelected(){
+        return this.world.garnitura.imageTexture.configuration;
+    }
     resize(){
         this.camera.resize();
         this.renderer.resize();
@@ -46,6 +54,7 @@ export default class Experience{
         this.camera.update();
         this.world.update();
         this.renderer.update();
+        this.statsUI.update();
     }
 
     destroy(){

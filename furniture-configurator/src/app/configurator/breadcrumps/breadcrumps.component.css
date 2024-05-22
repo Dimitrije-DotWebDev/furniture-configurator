@@ -1,0 +1,11 @@
+.breadcrumps{
+    font-size: 1.5rem;
+    font-weight: normal;
+    cursor: default;
+}
+.active-breadcump{
+    color: #45B5FC;
+}
+.clickable-breadcrump{
+    cursor: pointer;
+}

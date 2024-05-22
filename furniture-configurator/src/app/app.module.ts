@@ -7,10 +7,12 @@ import { NavBarModule } from './nav-bar/nav-bar.module';
 import { LandingModule } from './landing/landing.module';
 import { ConfiguratorModule } from './configurator/configurator.module';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { OrderFormComponent } from './order-form/order-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    OrderFormComponent,
   ],
   imports: [
     BrowserModule,

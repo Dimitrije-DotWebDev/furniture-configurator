@@ -20,7 +20,10 @@ export default class Room{
         this.setGeometry(x,y,z);
         this.setMaterial();
         this.setMesh();
+        
+        this.setLamp();
         this.setTV();
+        this.setPlant();
     }
     setGeometry(x,y,z){
         this.geometry = new THREE.BoxGeometry(x,y,z);
@@ -36,27 +39,36 @@ export default class Room{
                 repeat.x = 2;
                 repeat.y = 2;
             }else{
-                color = 0xFAF9F6;
+                repeat.x = 2;
+                repeat.y = 3.34;
+                color = 0x1b4c41;
             }
             if(key == "ny"){
                 opacity = 0;
                 color = 0xffffff;
-            }
-            if(key == "pz" || key == "nz"){
-                
-                repeat.x = 1.67;
-                repeat.y = 1;
             }
             this.resource[key].wrapS = 1000;
             this.resource[key].wrapT = 1000;
             this.resource[key].repeat.set(repeat.x, repeat.y);
             if(key != "py"){
                 this.material.push(new THREE.MeshPhysicalMaterial({color: color, map: this.resource[key], side:THREE.BackSide, transparent: true, opacity: opacity,}));
-                this.material[this.material.length-1].metalnessMap = this.resources.items.roomWallMetalMap;
+                //this.material[this.material.length-1].metalnessMap = this.resources.items.roomWallMetalMap;
                 this.material[this.material.length-1].normalMap = this.resources.items.roomWallNormalMap;
                 this.material[this.material.length-1].roughnessMap = this.resources.items.roomWallRoughnessMap;
                 this.material[this.material.length-1].bumpMap = this.resources.items.roomWallBumpMap;
                 this.material[this.material.length-1].aoMap = this.resources.items.roomWallAoMap;
+                this.material[this.material.length-1].normalMap.wrapS = 1000;
+                this.material[this.material.length-1].roughnessMap.wrapS = 1000;
+                this.material[this.material.length-1].bumpMap.wrapS = 1000;
+                this.material[this.material.length-1].aoMap.wrapS = 1000;
+                this.material[this.material.length-1].normalMap.wrapT = 1000;
+                this.material[this.material.length-1].roughnessMap.wrapT = 1000;
+                this.material[this.material.length-1].bumpMap.wrapT = 1000;
+                this.material[this.material.length-1].aoMap.wrapT = 1000;
+                this.material[this.material.length-1].normalMap.repeat.set(repeat.x,repeat.y);
+                this.material[this.material.length-1].roughnessMap.repeat.set(repeat.x,repeat.y);
+                this.material[this.material.length-1].bumpMap.repeat.set(repeat.x,repeat.y);
+                this.material[this.material.length-1].aoMap.repeat.set(repeat.x,repeat.y);
             }else{
                 this.material.push(new THREE.MeshPhysicalMaterial({color: 	color, map: this.resource[key], side:THREE.BackSide, transparent: true, opacity: opacity,roughness: 0.5, metalness: 0.55}));
                 this.material[this.material.length-1].metalnessMap = this.resources.items.roomFloorMetalMap;
@@ -82,7 +94,40 @@ export default class Room{
         this.tv.rotation.y += Math.PI;
         this.tv.position.z += 19.95;
         this.tv.scale.set(8,8,8);
+        this.tv.traverse(child=>{
+            if(child.isMesh){
+                if(child.name == "Plane"){
+                    child.material.map = this.resources.items.tvTexture;
+                    child.material.map.flipY = false;
+                }
+            }
+        })
         this.scene.add(this.tv);
+    }
+    setPlant(){
+        this.plant = this.resources.items.plantModel.scene;
+        this.plant.scale.set(15,15,15);
+        this.plant.position.z -= 16;
+        this.plant.position.x -= 20;
+        this.plant.position.y -= 10;
+        this.scene.add(this.plant);
+    }
+    setLamp(){
+        this.lamp = this.resources.items.lampModel.scene;
+        this.lamp.scale.set(11,11,11);
+        this.lamp.position.z -= 9;
+        this.lamp.position.x = 15;
+        this.lamp.position.y -= 10;
+        this.lamp.rotation.y -= Math.PI/4;
+        this.lamp.traverse(child=>{
+            if(child.isMesh){
+                if(child.name == "Mesh_1"){
+                    child.material.map = null;
+                    child.material.color.set(0xffffff);
+                }
+            }
+        })
+        this.scene.add(this.lamp);
     }
     update(){
         if(this.experience.camera.instance.position.z > 19.9 && this.tv.visible){
