@@ -20,6 +20,27 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width: 1580px){
+    .row{
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .choose-text {
+        
+        margin-top: 50px;
+    }
+    .choose-text span{
+        display: none;
+    }
+    .choose-text:after{
+        content: "MODELS";
+        align-self: center;
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 780px){
     .row{
         justify-content: center;
@@ -34,6 +55,10 @@
 @media(max-width: 600px){
     .row{
         margin: 0;
+    }
+    .choose-text{
+        
+        margin-top: 10px;
     }
     .choose-text:after{
         margin-left: 10px;

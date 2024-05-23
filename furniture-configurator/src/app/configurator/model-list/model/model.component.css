@@ -41,6 +41,13 @@
     font-size: 1.8rem;
     color: black;
 }
+
+@media (max-width: 1580px){
+    .model-title {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 948px){
     .model{
         width: 40vw;
@@ -79,11 +86,11 @@
 @media (max-width: 600px){
     .model{
         width: 80vw;
-        height: 80vw;
+        height: 60vw;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 5vh;
+       /* margin-top: 5vh; */
     }
     .model-image{
         width: 100%;

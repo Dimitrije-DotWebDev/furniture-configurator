@@ -34,6 +34,16 @@
     font-size: 1.8rem;
     color: white;
 }
+@media (max-width: 1580px){
+    .category{
+        width: 20vw;
+        height: 20vw;
+        margin-top: 5vh;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
 @media (max-width: 948px){
     .category{
         width: 40vw;
@@ -46,7 +56,8 @@
     .category{
         width: 30vw;
         height: 30vw;
-        margin-left: 0;
+        margin-left: -20px;
+        margin-right: -20px;
         margin-top: 10vh
     }
     .category-title{

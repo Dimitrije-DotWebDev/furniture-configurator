@@ -17,9 +17,9 @@ export class ThreejsViewerComponent implements OnInit {
     
     const script = document.createElement('script');
       script.src = "assets/threejs-scripts/bundle.26b1937c2da9e7b5a3ea.js";
-      script.onload = () =>{
+      /*script.onload = () =>{
         (window as any).experience.setGarnitura(this.model.objectPath, this.model.type, this.model.scale);
-      }
+      }*/
       document.body.appendChild(script);
 
       let configurator = document.getElementById("configurator");

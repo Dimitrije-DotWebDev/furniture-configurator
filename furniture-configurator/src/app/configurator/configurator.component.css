@@ -56,6 +56,12 @@
     background-repeat: no-repeat;
     background-position: bottom;
 }
+
+@media (max-width: 1580px){
+    
+    
+}
+
 @media (max-width: 948px){
     .background-gradient{
         background-size: 100% 30%;
@@ -65,18 +71,20 @@
 }
 @media(max-width: 850px){
     .vh-max{
-        min-height: unset;
+        min-height: 100vh;
     }
 }
 @media(max-width: 780px){
     .breadcrumps-menu{
+        margin-top: 150px;
         padding-left: 30px;
         text-align: left;
         border: none;
+        font-size: 18px;
     }
     .breadcrumps-menu span{
         margin: 0;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: lighter;
         margin-right: 5px;
     }
@@ -114,10 +122,25 @@
         display: none;
     }
 }
+@media(max-width: 1580px){
+    
+    .configurator{
+        padding: 0px 10px;
+    }
+    .breadcrumps-menu{
+        padding-left: 114px;
+        margin-left: 15px;
+    }
+}
+
 @media(max-width: 600px){
     
     .configurator{
         padding: 0px 10px;
+    }
+    .breadcrumps-menu{
+        padding-left: 0;
+        margin-left: 15px;
     }
 }
 

@@ -19,6 +19,22 @@
     padding-left: 2rem;
     padding-right: 2rem;
 }
+@media (max-width: 1580px){
+    .choose-text span{
+        display: none;
+    }
+    .choose-text:after{
+        content: "CHOOSE CATEGORY";
+        font-size: 3rem;
+        letter-spacing: 1.5rem;
+    }
+    .list-view div{
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media (max-width: 780px){
     .choose-text span{
         display: none;
