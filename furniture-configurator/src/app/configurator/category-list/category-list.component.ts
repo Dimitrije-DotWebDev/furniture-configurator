@@ -22,6 +22,8 @@ export class CategoryListComponent {
         this.categories.push(new CategoryItem(category.Name, "http://reservisi.me:9000/conf/" + category.ImgPath))
       })
     })*/
+    document.querySelector(".breadcrumps-menu")?.classList.remove("breadcrumps-menu-absolute")
+  
   }
   constructor(){
 

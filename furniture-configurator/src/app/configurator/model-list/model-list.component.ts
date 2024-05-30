@@ -31,6 +31,8 @@ export class ModelListComponent implements OnInit{
       {title: "Milano", imagePath: "assets/images/models-preview/Milano.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
       {title: "Rest", imagePath: "assets/images/models-preview/Rest.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1}
     ];
+    document.querySelector(".breadcrumps-menu")?.classList.remove("breadcrumps-menu-absolute")
+  
   }
 
 }

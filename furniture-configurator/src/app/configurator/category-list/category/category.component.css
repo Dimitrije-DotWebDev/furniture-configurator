@@ -26,8 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(66,172,239, 0.73);
-    background: linear-gradient(180deg, rgba(66,172,239,0.73) 0%, rgba(0,45,87,0.73) 100%);
+    background: linear-gradient(90deg, #014343 43%, #0A1112 100%);
+    opacity: 70%;
 }
 .category-title{
     font-family: 'Poppins';

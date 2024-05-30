@@ -18,6 +18,9 @@
     justify-content: center;
 
 }
+.breadcrumps-menu-absolute{
+    position: absolute;
+  }
 .line-style {
     /*font-size: 90px;
     font-weight: 100;*/
@@ -50,8 +53,7 @@
     max-width: 1920px;
 }
 .background-gradient{
-    background: rgb(66,181,252, 1);
-    background: linear-gradient(180deg, rgba(66,181,252,1) 0%, rgba(13,38,61,1) 100%);
+    background: linear-gradient(90deg, #014343 43%, #0A1112 100%);
     background-size: 100% 50%;
     background-repeat: no-repeat;
     background-position: bottom;

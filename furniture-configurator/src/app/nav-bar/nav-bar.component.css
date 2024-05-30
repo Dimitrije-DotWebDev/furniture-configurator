@@ -88,6 +88,10 @@
     .navbar-brand{
         margin-left: 1.5vw
     }
+    .navbar-brand img{
+        height: 50px;
+        width: 100px;
+    }
     #powered-by-mobile{
         height: 76px;
     }

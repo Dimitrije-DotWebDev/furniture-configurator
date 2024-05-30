@@ -138,18 +138,57 @@
 <canvas id="canvas" class="webgl"></canvas>
 <div id="order-page" class="display-none">
     <div id="order-page-container">
-        <p>Thank you for using Natuzzi Configurator Service!</p>
+        <p>Thank you for using Cimo Configurator Service!</p>
         <div id="customization-info">
             <p id="customization-info-title">Your customization <br><span>Zone Set Furniture</span></p>
             <div id="customization-info-content">
                 <div id="sitting-part-info">
-                    <img src="assets/images/configuration/icons/sitting part.png" alt="">
+                    <div id="sitting-part-square">
+                        <p>Part</p>
+                        <img src="assets/images/configuration/icons/sitting part.png" alt="">
+                    </div>
+                    <div id="sitting-part-square">
+                        <p>Texture</p>
+                        <img src="assets/images/configuration/icons/sitting part.png" alt="">
+                        <span>Leather</span>
+                    </div>
+                    <div id="sitting-part-square">
+                        <p>Color</p>
+                        <img src="assets/images/configuration/icons/sitting part.png" alt="">
+                        <span>Sea</span>
+                    </div>
                 </div>
                 <div id="side-part-info">
-                    <img src="assets/images/configuration/icons/sofa sides.png" alt="">
+                    <div id="side-part-square">
+                        <p>Part</p>
+                        <img src="assets/images/configuration/icons/sofa sides.png" alt="">
+                    </div>
+                    <div id="side-part-square">
+                        <p>Texture</p>
+                        <img src="assets/images/configuration/icons/sofa sides.png" alt="">
+                        <span>Leather</span>
+                    </div>
+                    <div id="side-part-square">
+                        <p>Color</p>
+                        <img src="assets/images/configuration/icons/sofa sides.png" alt="">
+                        <span>Pink</span>
+                    </div>
                 </div>
                 <div id="leg-part-info">
-                    <img src="assets/images/configuration/icons/sofa legs.png" alt="">
+                    <div id="leg-part-square">
+                        <p>Part</p>
+                        <img src="assets/images/configuration/icons/sofa legs.png" alt="">
+                    </div>
+                    <div id="leg-part-square">
+                        <p>Texture</p>
+                        <img src="assets/images/configuration/icons/sofa legs.png" alt="">
+                        <span>Leather</span>
+                    </div>
+                    <div id="leg-part-square">
+                        <p>Color</p>
+                        <img src="assets/images/configuration/icons/sofa legs.png" alt="">
+                        <span>Peach</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,20 +197,20 @@
             <div id="personal-info-content">
                 <div id="user-info">
                     <div>
-                        <label for="name">Name *</label>
+                        <label for="name">Name <span>*</span> </label> 
                         <input type="text" name="name" id="name">
                     </div>
                     
                     <div>
-                        <label for="surname">Surname *</label>
+                        <label for="surname">Surname <span>*</span></label>
                         <input type="text" name="surname" id="surname">
                     </div>
                     <div>
-                        <label for="phone">Phone number *</label>
+                        <label for="phone">Phone number <span>*</span></label>
                         <input type="tel" name="phone" id="phone">
                     </div>  
                     <div>
-                        <label for="email">Email address *</label>
+                        <label for="email">Email address <span>*</span></label>
                         <input type="email" name="email" id="email">
                     </div>
                 </div>
@@ -181,8 +220,8 @@
                 </div>            
                 <div id="schedule-input-div">
                     <label for="call">schedule call between (optional)</label>
-                    <input type="time" id="from-time" value="12:00" step="1" />
-                    <input type="time" id="to-time" value="17:00" step="1" />
+                    <input type="time" id="from-time" value="12:00" min="00:00" max="24:00" />
+                    <input type="time" id="to-time" value="17:00" min="00:00" max="24:00" />
                 </div>
             </div>
         </div>
@@ -190,8 +229,27 @@
         <div id="save-design-div">
             <input type="checkbox" name="" id="save-design"><label for="save-design">Save design as pdf</label>
         </div>
-        <button id="submit-order">SUMBIT</button>
+        <button id="submit-order">SUBMIT</button>
         <div id="order-request-text">ORDER REQUEST</div>
     </div>    
 </div>
 
+<div id="sent-request" class="display-none">
+    <div class="sent-request-container">
+        <div id="X">
+            <p>X</p>
+        </div>
+        <p id="sent-request-title">ORDER REQUEST SENT SUCCESSFULLY</p>
+        <div id="sent-request-content">
+            <img src="assets/images/icons/check.png" id="checked"/>
+            <p>Thank you for your order request!</p>
+            <p id="sent-request-service">Our customer service will contact you soon</p>
+        </div>
+        <p id="social-medias-title">Follow us on social medias</p>
+        <div class="social-medias-icons">
+            <img src="assets/images/icons/instagram.png" />
+            <img src="assets/images/icons/x.png" />
+            <img src="assets/images/icons/tiktok.png" />
+        </div>
+    </div>
+</div>

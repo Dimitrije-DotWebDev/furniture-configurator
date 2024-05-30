@@ -14,6 +14,7 @@ export class ThreejsViewerComponent implements OnInit {
   ngOnInit(){
     this.model = {title: this.selectedModelItem, category: "Sofe i fotelje", imagePath: "assets/images/models-preview/Melody.png", objectPath: "assets/models/sofa/carrera/carrera.fbx", type: "fbx", scale: 0.1};
     
+  document.querySelector(".breadcrumps-menu")?.classList.add("breadcrumps-menu-absolute")
     
     const script = document.createElement('script');
       script.src = "assets/threejs-scripts/bundle.26b1937c2da9e7b5a3ea.js";

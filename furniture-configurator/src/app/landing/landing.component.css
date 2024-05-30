@@ -29,14 +29,14 @@
     transform: translate(-50%, -50%);
     font-family: 'Hymala';
     font-size: 6rem;
-    line-height: 122px;
+    line-height: 121px;
     text-align: center;
     z-index: 3;
 }
 #logotip span{
-    color:#43B1F6;
+    color:#ffffff;
     font-family: 'Tangerine';
-    font-size: 5.5rem;
+    font-size: 3rem;
     font-weight: light;
 }
 .swipe-icon{
@@ -49,6 +49,25 @@
 .swipe-icon #mobile-swipe-image{
     display: none;
 }
+@media(max-width: 1580px){
+    #banner-cover{
+        height: calc(100vh - 60px);
+        margin-top: -15px;
+    }
+    #logotip{
+        font-size: 7rem;
+        line-height: 3rem;
+        top: 40%;
+    }
+    
+    #logotip img{
+        height: 8rem;
+        width: 19rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+}
+
 @media (max-width: 1040px){
     #logotip{
         font-size: 5rem;
@@ -60,7 +79,7 @@
 }
 @media (max-width: 780px){
     #banner-cover{
-        width: 85vw;
+        width: 105vw;
     }
     #logotip{
         transform: translateX(-25%);
@@ -84,17 +103,18 @@
 @media (max-width: 600px){
     #banner{
         margin-top: 52px;
-        height: calc(100vh - 52px);
+        height: calc(100vh - 47px);
     }
     #banner-cover{
         width: 90vw;
-        height: calc(100vh - 52px);
+        height: calc(100vh - 13px);
     }
     #logotip{
         font-size: 3rem;
     }
     #logotip img{
-        width: 50%;
+        width: 60%;
+        margin-left: 30px;
     }
     #logotip span{
         font-size: 2.5rem;
