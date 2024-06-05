@@ -12,7 +12,17 @@ export class LandingComponent implements OnInit{
         (document as any).querySelector("#banner").setAttribute("class", "scrolled-banner");
         setTimeout(()=>{
           (document as any).querySelector("#banner").style.display = "none";
+          (document as any).querySelector("html").classList.remove("overflowYHidden");
+          (document as any).querySelector("body").classList.remove("overflowYHidden");
         },2000)
     },false)
+    document.body.addEventListener("mousewheel", (event)=>{
+      (document as any).querySelector("#banner").setAttribute("class", "scrolled-banner");
+        setTimeout(()=>{
+          (document as any).querySelector("#banner").style.display = "none";
+          (document as any).querySelector("html").classList.remove("overflowYHidden");
+          (document as any).querySelector("body").classList.remove("overflowYHidden");
+        },2000)
+  });
   }
 }

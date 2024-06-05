@@ -229,14 +229,14 @@
         <div id="save-design-div">
             <input type="checkbox" name="" id="save-design"><label for="save-design">Save design as pdf</label>
         </div>
-        <button id="submit-order">SUBMIT</button>
+        <button id="submit-order" (click)="openSentRequestPage()">SUBMIT</button>
         <div id="order-request-text">ORDER REQUEST</div>
     </div>    
 </div>
 
 <div id="sent-request" class="display-none">
     <div class="sent-request-container">
-        <div id="X">
+        <div (click)="restartApp()" id="X">
             <p>X</p>
         </div>
         <p id="sent-request-title">ORDER REQUEST SENT SUCCESSFULLY</p>

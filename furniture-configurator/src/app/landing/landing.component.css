@@ -3,6 +3,7 @@
     width: 100vw;
     height: calc(100vh - 89px);
     display: flex;
+    position: relative;
 }
 .scrolled-banner{
     position: relative;

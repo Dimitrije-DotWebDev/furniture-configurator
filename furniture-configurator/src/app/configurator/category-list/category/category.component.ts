@@ -9,11 +9,12 @@ import { SelectedItemsService } from '../../services/selected-items.service';
 export class CategoryComponent {
   @Input() title: string = "";
   @Input() imagePath : string = "";
+  @Input() id : string = "";
   @Output() selectedCategory = new EventEmitter<string>();
 
   constructor(private selectedItemsService: SelectedItemsService){}
 
   selectCategory(): void{
-    this.selectedItemsService.selectedCategoryItem$.next(this.title);
+    this.selectedItemsService.selectedCategoryItem$.next(this.id);
   }
 }
