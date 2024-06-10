@@ -3,15 +3,17 @@
 </div>
 
 <ng-template #showCategories>
-    <div class="list-view">
-        <div class="row">
-            <app-category *ngFor="let category of categories"
-                [title] = "category.title"
-                [imagePath] = "category.imagePath"
-                [id] = "category.id"
-            >
-            </app-category>
+    <div class="scroll-list-view">
+        <div class="list-view">
+            <div class="row">
+                <app-category *ngFor="let category of categories"
+                    [title] = "category.title"
+                    [imagePath] = "category.imagePath"
+                    [id] = "category.id"
+                >
+                </app-category>
+            </div>
+            <p class="choose-text"><span>CHOOSE CATEGORY</span></p>
         </div>
-        <p class="choose-text"><span>CHOOSE CATEGORY</span></p>
     </div>
 </ng-template>

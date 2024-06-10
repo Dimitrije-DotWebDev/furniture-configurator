@@ -11,6 +11,21 @@
     color: white;
     font-weight: 100;
 }
+.scroll-list-view{
+    height: 50vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll!important;
+    overflow-y: hidden;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid white;
+    align-self: center;
+    white-space: nowrap;
+}
 .list-view{
     min-height: 70vh;
     display: flex;

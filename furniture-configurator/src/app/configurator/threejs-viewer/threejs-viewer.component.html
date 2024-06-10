@@ -25,15 +25,15 @@
         <img src="assets/images/a9114e6ce33c103256ca423b10381902.jpg" alt="" class="" data-mappath="assets/textures/materijali/Metal/">
     </div>
     <div id="material">
-        <div data-materialName="LUIS">
+        <div class="selected-material" data-materialName="LUIS">
             <img src="assets/textures/materijali/LUIS 39.jpg" alt="" class="selected" data-mapPath="assets/textures/materijali/PH/">
             <span>LUIS</span>
         </div>
-        <div data-materialName="TEXAS">
+        <div class="selected-material" data-materialName="TEXAS">
             <img src="assets/textures/materijali/Texas 23.jpg" alt="" class="" data-mapPath="assets/textures/materijali/PH/">
             <span>TEXAS</span>
         </div>
-        <div data-materialName="HARMONY">
+        <div class="selected-material" data-materialName="HARMONY">
             <img src="assets/textures/materijali/PH/A23DTEX_Albedo.jpg" alt="" class="" data-mapPath="assets/textures/materijali/PH/">
             <span>HARMONY</span>
         </div>
@@ -128,7 +128,7 @@
         </div>-->
     </div>
     <p id="order-title">FINISH CONFIGURATION</p>
-    <div id="order-button" (click)="openOrderPage()"><span>order request</span><img src="assets/images/configuration/Arrow-right.png" alt=""></div>
+    <div id="order-button" (click)="openOrderPage()"><span style=" font-weight: 100;">order request</span><img src="assets/images/configuration/Arrow-right.png" alt=""></div>
 </div>
 <div class="loading">
     <div class='uil-ring-css' style='transform:scale(0.79);'>
@@ -236,9 +236,7 @@
 
 <div id="sent-request" class="display-none">
     <div class="sent-request-container">
-        <div (click)="restartApp()" id="X">
-            <p>X</p>
-        </div>
+        <button id="X" (click)="restartApp()">Configure another model</button>
         <p id="sent-request-title">ORDER REQUEST SENT SUCCESSFULLY</p>
         <div id="sent-request-content">
             <img src="assets/images/icons/check.png" id="checked"/>
