@@ -4,16 +4,16 @@
 
 <ng-template #showCategories>
     <div class="scroll-list-view">
-        <div class="list-view">
-            <div class="row">
-                <app-category *ngFor="let category of categories"
-                    [title] = "category.title"
-                    [imagePath] = "category.imagePath"
-                    [id] = "category.id"
-                >
-                </app-category>
-            </div>
-            <p class="choose-text"><span>CHOOSE CATEGORY</span></p>
+        <button class="arrow" id="prev">&lt;</button>
+        <div class="list-view ">
+            <app-category *ngFor="let category of categories"
+            [title] = "category.title"
+            [imagePath] = "category.imagePath"
+            [id] = "category.id"
+            >
+            </app-category>
         </div>
+        <button class="arrow" id="next">&gt;</button>
     </div>
+    <p class="choose-text"><span>CHOOSE CATEGORY</span></p>
 </ng-template>

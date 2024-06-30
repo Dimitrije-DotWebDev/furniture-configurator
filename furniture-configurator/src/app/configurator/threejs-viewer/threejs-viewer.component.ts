@@ -24,6 +24,10 @@ export class ThreejsViewerComponent implements OnInit {
       }
       document.body.appendChild(script);
 
+      const script2 = document.createElement('script');
+      script2.src = "assets/js/openConfigurator.js";
+      document.body.appendChild(script2);
+
       let configurator = document.getElementById("configurator");
       let canvas = document.getElementById("canvas");
       let configuratorScreen = document.getElementsByClassName("configurator")[0];
