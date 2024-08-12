@@ -29,7 +29,6 @@ export default class Resources extends EventEmitter{
                 const [file] = await Promise.all([this.loaders.gltfLoader.loadAsync(
                     source.path,
                 )]);
-                console.log(source);
                 this.sourceLoaded(source,file)
             }else if(source.type === "fbxModel"){
                 this.loaders.fbxLoader.load(
@@ -62,6 +61,9 @@ export default class Resources extends EventEmitter{
 
         if(this.loaded == this.toLoad+1){
             this.trigger("ready");
+            setTimeout(()=>{
+                document.querySelector(".loading").classList.add("hidden");
+            }, 500)
         }
     }
 }

@@ -2,8 +2,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 10%;
     
+}
+.row{
+    justify-content: left;
+    margin-left: 5vw!important
 }
 .choose-text{
     letter-spacing: 1rem;

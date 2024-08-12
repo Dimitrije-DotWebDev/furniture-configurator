@@ -7,7 +7,7 @@
 }
 .scroll-list-view{
     height: 50vh;
-    width: 95.7vw;
+    width: 89.7vw;
     display: flex;
     flex-direction: row;
     padding-left: 1rem;
@@ -54,6 +54,37 @@
         content: "CHOOSE CATEGORY";
         font-size: 3rem;
         letter-spacing: 1.5rem;
+    }
+    .scroll-list-view{
+        height: 50vh;
+        width: 95.7vw;
+        display: flex;
+        flex-direction: row;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        align-self: center;
+        white-space: nowrap;
+    }
+    .list-view{
+        min-height: 70vh;
+        justify-content: space-around;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        overflow-x: scroll!important;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        transition: transform 0.5s ease;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+          scroll-behavior: smooth;
     }
 }
 @media (max-width: 780px){

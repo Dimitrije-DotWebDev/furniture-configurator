@@ -28,9 +28,9 @@ export class ModelListComponent implements OnInit{
       {title: "Cleopatra", imagePath: "assets/images/models-preview/Cleopatra.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
       {title: "Leopold", imagePath: "assets/images/models-preview/Leopold.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
       {title: "Zona", imagePath: "assets/images/models-preview/Zona.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
-      {title: "Harmony", imagePath: "assets/images/models-preview/Harmony.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
+      /*{title: "Harmony", imagePath: "assets/images/models-preview/Harmony.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
       {title: "Milano", imagePath: "assets/images/models-preview/Milano.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1},
-      {title: "Rest", imagePath: "assets/images/models-preview/Rest.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1}
+      {title: "Rest", imagePath: "assets/images/models-preview/Rest.png", objectPath: "", category: "Sofe i fotelje", type: "fbx", scale: 0.1}*/
     ];
     //console.log(this.selectedItemsService.selectedCategoryItem$.value);
     /*axios.get("https://8dpthbbd-9999.euw.devtunnels.ms/conf/categories/" + this.selectedCategory, {

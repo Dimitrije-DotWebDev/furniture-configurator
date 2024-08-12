@@ -158,7 +158,6 @@ export default class Garnitura{
                 this.parts.push(child);
             }
         })
-        document.querySelector(".loading").classList.add("hidden");
     }
     setPartsHandler(){
         this.imageTexture.on("part changed", ()=>{

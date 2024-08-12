@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
 import { CategoryItem } from '../../shared/categoryItem';
 import axios from 'axios';
-import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
 @Component({
   selector: 'app-category-list',

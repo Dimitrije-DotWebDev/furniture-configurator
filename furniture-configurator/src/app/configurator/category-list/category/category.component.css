@@ -3,7 +3,7 @@
     width: 264px;
     height: 264px;
     padding: 0;
-    margin: 0;
+    margin: 20px;
     cursor: pointer;
     transition-duration: 1s;
 }

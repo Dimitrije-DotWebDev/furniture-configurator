@@ -210,7 +210,7 @@
 
 #customization-info{
     background-color: white;
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0 / 20%);
+    box-shadow: 5px 5px 1.5px 1px lightgrey;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     width: 100%;
@@ -299,7 +299,7 @@
 }
 #personal-info{
     background-color: white;
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0 / 20%);
+    box-shadow: 5px 5px 1.5px 1px lightgrey;
     margin-bottom: 3rem;
     width: 100%;
     border: 1px solid #00ABAB;
@@ -396,14 +396,16 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.4rem;
-    letter-spacing: 3rem;
+    letter-spacing: 4.55rem;
     font-size: 5rem;
     width: 100vw;
     font-weight: 200;
     align-self: center;
 }
 /*LOADING*/
-
+.close{
+  display: none;
+}
 *.hidden {
     display: none !important;
   }
@@ -675,7 +677,7 @@
     width: 5vw;
     height: 5vh;
     position: absolute;
-    margin-top: -60vh;
+    margin-top: -57vh;
     margin-left: 80vw;
     z-index: 2;
     transition-duration: 1s!important;
@@ -688,6 +690,7 @@
     margin-left: 0vw;
     z-index: 2;
     transition-duration: 1s!important;
+    display: unset;
   }
   .open img{
     transform: rotateY(180deg);
